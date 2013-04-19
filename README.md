@@ -1,6 +1,6 @@
-# Hello World PhoneGap Application
+# Aplikasi BajetKahwin dan Phonegap
 
-> A Hello World application built with PhoneGap
+> Aplikasi BajetKahwin yang dibina dengan PhoneGap
 
 ## PhoneGap Build
 
