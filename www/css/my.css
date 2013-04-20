@@ -28,5 +28,8 @@
    text-align: center;
 }
 
-.jumlah {background:#333; color:#fff; text-align: center; margin:5px;}
+.jumlah {background:#999; color:#fff; text-align: center; margin:5px; font-size:1.5em; border-radius:0.6em;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) inset; font-weight: normal; padding:5px;}
 
+label {position:absolute; margin:10px; color:#333; z-index: 100; font-size: .9em;}
+input {text-align: right;}
