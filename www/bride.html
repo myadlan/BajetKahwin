@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="css/my.css" rel="stylesheet" > 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>BajetKahwin.my Edisi Wanita - Kalkulator Merancang Belanja Kahwin Anda</title>
+	<script src="js/jquery-1.6.2.js"></script>
+	<script src="js/bride.js"></script>
+</head>
+<body>
+	<div class="header bride">
+        <h3>Pihak Perempuan</h3>
+        <div class="jumlah"><span id="top">RM</span></div>
+    </div>
+<div class="container"><form method="post" onsubmit="subs()" name="zanmbeel" >
+	
+
+<h3>Sumber Kewangan</h3>
+	<label>Mas kahwin</label>
+	<input type="text" maxlength="5" id="minus1"  value="0" onchange="update()"/> 
+	<label>Wang</label>
+	<input type="text" maxlength="5" id="minus2"  value="0" onchange="update()"/> 
+	<label>Sumber lain</label>
+	<input type="text" maxlength="5" id="minus3"  value="0" onchange="update()"/> 
+<h3>  Majlis  Pernikahan </h3>
+	<label>Bilangan jemputan</label>
+	<input type="text" maxlength="5" id="jumlz" value="0" onchange="update()"/>
+	<label>Katering per pax</label>
+	<input type="text" maxlength="5" id="cal1"  value="0" onchange="update()"/>
+	<label>Sewa khemah / masjid</label>
+	<input type="text" maxlength="5" id="cal2"  value="0" onchange="update()"/> 
+	<label>Kos pelamin &amp; hiasan</label>
+	<input type="text" maxlength="5" id="cal3"  value="0" onchange="update()"/>
+	<label>Harga 1 <em>door gift</em> / berkat</label>
+	<input type="text" maxlength="5" id="cal4"  value="0" onchange="update()"/>
+	<label>Jumlah set dulang hantaran</label>
+	<input type="text" maxlength="5" id="cal4a"  value="0" onchange="update()"/>
+<h3>Keperluan Kenduri</h3>
+	<label>Sewa dewan / khemah</label>
+	<input type="text" maxlength="5" id="cal5"  value="0" onchange="update()"/>
+	<label>Baju pengantin</label>
+	<input type="text" maxlength="5" id="cal6"  value="0" onchange="update()"/>
+	<label>Jurusolek</label>
+	<input type="text" maxlength="5" id="cal7"  value="0" onchange="update()"/> 
+<h3> Saiz Kenduri </h3>
+	<label>Bilangan jemputan</label>
+	<input type="text" maxlength="5" id="sezi"  value="0" onchange="half(),update()"/>
+	<label>Katering per pax</label>
+	<input type="text" maxlength="5" id="cal8"  value="0" onchange="update()"/>
+	<label><em>Door gift</em> / berkat</label>
+	<input type="text" maxlength="5" id="cal9"  value="0" onchange="update()"/>	
+<h3>Kad Undangan</h3>
+	<label>Bilangan kad</label>	
+	<input type="text" maxlength="5" id="jump"  value="0" onchange="pointSix(),update()"/>
+	<label>Harga sekeping kad</label>
+	<input type="text" maxlength="5" id="cal10" value="0" onchange="update()"/>
+	<label>Jumlah Setem</label>
+	<input type="text" maxlength="5" id="cal11" value="0" onchange="update()"/>	
+<h3>Tambahan </h3>
+	<label>	<input type="checkbox" id="cal" onclick="ableDisable('field1')" />Pelamin &amp; hiasan</label>
+	<input type="text" maxlength="5" id="field1" onchange="update()" disabled="disabled"/>
+	<label><input type="checkbox" id="cal" onclick="ableDisable('field2')" />Silat atau Tarian</label>
+	<input type="text" maxlength="5" id="field2" onchange="update()" disabled="disabled"/>
+	<label><input type="checkbox" id="cal" onclick="ableDisable('field3')" />Kompang	</label>
+	<input type="text" maxlength="5" id="field3" onchange="update()" disabled="disabled"/>
+	<label><input type="checkbox" id="cal" onclick="ableDisable('field4')" />Hiburan</label>
+	<input type="text" maxlength="5" id="field4" onchange="update()" disabled="disabled"/>
+	<label>	<input type="checkbox" id="cal" onclick="ableDisable('field5')" />Pengacara</label>
+	<input type="text" maxlength="5" id="field5" onchange="update()" disabled="disabled"/>
+	<label><input type="checkbox" id="cal" onclick="ableDisable('field6')" />Jurugambar</label>
+	<input type="text" maxlength="5" id="field6" onchange="update()" disabled="disabled"/>
+</form></div>
+</body>
+</html>
