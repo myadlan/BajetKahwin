@@ -1,0 +1,35 @@
+/* Homepage */
+#bg {  position: fixed; top: -50%; left: -50%; width: 200%; height: 200%;}
+#bg img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; min-width: 50%;min-height: 50%;}
+#homecenter {width: 300px; height: 300px; position: absolute; left: 50%; top: 50%; margin-left: -150px;
+   margin-top: -150px; text-align: center;}
+
+/* Calculator Page */
+body {font-family: Helvetica,Arial,sans-serif; margin:0; background:#e9e9e9;}
+.container {max-width: 600px; margin:45px auto 20px;}
+.header {position:fixed; background:#333; top:0; left:0; right:0; z-index: 100;}
+.inner {max-width: 600px; margin:0 auto;}
+.groom {background: #2d9cee;}
+.bride {background: #ff5ea4;}
+.header h3 {font-size:1em; color:#fff; margin:10px 10px; float:left;}
+.jumlah {min-width:30%; border-radius: 5px; float:right; margin:5px 5px 0 0;
+  background:rgba(0, 0, 0, 0.2); color:#fff; text-align: center; font-size:1em; 
+font-weight: normal; padding:5px; box-shadow: 1px 1px 0 #333 inset;}
+.btn {padding:.6em 20px; display:block; margin:.5em 0; color:#fff; text-decoration: none; font-size: 16px;
+ font-weight: bold; text-shadow:0 1px 0 #4f4f4f; border-radius:.4em;}
+.container h3 {background:#ccc; color:#666; text-align:center; font-size: .9em; font-weight:normal; text-shadow:0 1px 0 #fff;
+-webkit-border-radius: 3px 3px 0px 0px; border-radius: 3px 3px 0px 0px; margin:10px 20% 0; padding:5px 10px;}
+.mahar {text-align: left; height:25px;}
+.mahar select {float:left;}
+ul {list-style: none; margin:0 10px; padding:0; background:#fff; border-radius: 5px; box-shadow: 0 1px 0 #999;}
+li {margin:0; padding:8px 10px; clear:both; border-bottom:1px solid #ddd;}
+li:last-child {border:none;}
+label {color:#333; font-size: 1em; width:65%; display:inline-block; padding:4px 0;}
+input[type='text'] {font-size:1.1em; text-align: right; width:70px; float:right; height:20px; outline: none; 
+	padding-right:5px;}
+input[type=text]:focus {box-shadow: 0 0 5px rgba(81, 203, 238, 1);}
+input[type='checkbox'] {margin-right:10px;}
+#calss {}
+@media only screen and (max-width : 320px) { body {background:;}
+/* Styles */
+}
