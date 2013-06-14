@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.dezeek.bajetkahwin"
         versionCode="10" 
-        version   = "1.2.0">
+        version   = "1.2.1">
 		
 	<!-- For more information about using config.xml, see
 		https://build.phonegap.com/docs/config-xml -->
@@ -38,7 +38,7 @@
     <name>BajetKahwin</name>
 
     <description>
-        Cubaan Menggunakan BajetKahwin dan PhoneGap. 
+        App BajetKahwin versi mobil. 
     </description>
 
     <author href="https://dezeek.com" email="adlan@dezeek.com">
