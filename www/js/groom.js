@@ -81,7 +81,7 @@ function inputs()
 var values=$('#select').val();
 if(values=="NYATAKAN")
 {
-$('#calss').html('<input type="text" maxlength="5" id="cal1"  value="0" onchange="update()"/>');
+$('#calss').html('<input type="text" maxlength="5" id="cal1"  value="0" onchange="update()" name="negeri"/>');
 }
 else
 {

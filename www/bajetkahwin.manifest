@@ -1,0 +1,18 @@
+CACHE MANIFEST
+
+CACHE:
+# html files
+index.html
+groom.html
+bride.html
+
+# css files
+styles.css
+
+# js files
+js/jquery-1.6.2.js
+js/bride.js
+js/groom.js
+
+# images
+bgapp.jpg

@@ -1,225 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html manifest="bajetkahwin.manifest">
 <head>
 	<link href="style.css" rel="stylesheet" > 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
 		<title>BajetKahwin.my Edisi Wanita - Kalkulator Merancang Belanja Kahwin Anda</title>
-	<script src="jquery-1.6.2.js"></script>
-	<script>
-//function to manage disbaled inpur fields
-function ableDisable(id)
-{
-if($("#"+id).attr("disabled")=="disabled")
-{
-$("#"+id).removeAttr('disabled');
-$("#"+id).removeAttr(id);
-$("#"+id).attr('name',id);
-
-if($("#"+id).val()=='')
-{
-$("#"+id).val(0);
-}
-update();
-}
-else
-{
-$("#"+id).attr('disabled',"disabled");
-
-update();
-}
-}
-function update()
-{
-
-var cal1=(parseFloat($("#cal1").val()))*(parseFloat($("#jumlz").val()));if(cal1=='NaN') {cal1=0;}
-var cal2=parseFloat($("#cal2").val());if(cal2=='NaN') {cal2=0;}
-var cal3=parseFloat($("#cal3").val());if(cal3=='NaN') {cal3=0;}
-var cal4=parseFloat($("#cal4").val())*(parseFloat($("#jumlz").val()));if(cal4=='NaN') {cal4=0;}
-var cal4a=(parseFloat($("#cal4a").val()));if(cal4a=='NaN') {cal4=0;}
-var cal5=parseFloat($("#cal5").val());if(cal5=='NaN') {cal5=0;}
-var cal6=parseFloat($("#cal6").val());if(cal6=='NaN') {cal6=0;}
-var cal7=parseFloat($("#cal7").val());if(cal7=='NaN') {cal7=0;}
-var cal8=(parseFloat($("#cal8").val()))*(parseFloat($("#sezi").val()));if(cal8=='NaN') {ca8=0;}
-var cal9=(parseFloat($("#cal9").val()))*(parseFloat($("#sezi").val()));if(cal9=='NaN') {ca9=0;}
-var cal10=(parseFloat($("#cal10").val()))*(parseFloat($("#jump").val()));if(cal10=='NaN') {cal0=0;}
-var cal11=parseFloat($("#cal11").val());if(cal11=='NaN') {cal11=0;}
-var min1=parseFloat($("#minus1").val());if(min1=='NaN') {min1=0;}
-var min2=parseFloat($("#minus2").val());if(min2=='NaN') {min2=0;}
-var min3=parseFloat($("#minus3").val());if(min3=='NaN') {min3=0;}
-
-
-
-var total=cal1+cal2+cal3+cal4+cal4a+cal5+cal6+cal7+cal8+cal9+cal10+cal11;
-    if($("#field1").attr("disabled")!=="disabled") { total=total+parseFloat($("#field1").val()); }
-    if($("#field2").attr("disabled")!=="disabled") { total=total+parseFloat($("#field2").val()); }
-    if($("#field3").attr("disabled")!=="disabled") { total=total+parseFloat($("#field3").val()); }
-    if($("#field4").attr("disabled")!=="disabled") { total=total+parseFloat($("#field4").val()); }
-    if($("#field5").attr("disabled")!=="disabled") { total=total+parseFloat($("#field5").val()); }
-    if($("#field6").attr("disabled")!=="disabled") { total=total+parseFloat($("#field6").val()); }
-    
-var minus=min1+min2+min3;
-if(total>0)
-{
-total=total-minus;
-}
-  $('#joomlah').text('RM '+total);
-  $('#top').text('RM '+total);
-  
-  
-  $('#twitter').attr('href','https://twitter.com/intent/tweet?text=Saya%20dijangka%20memerlukan%20sejumlah%20RM%20'+total+'%20untuk%20perkahwinan%20saya.%20Dapatkan%20anggaran%20untuk%20majlis%20anda%20juga%20di%20BajetKahwin.my');
-  $('#facebook').attr('href','http://www.facebook.com/sharer.php?u=http%3A%2F%2Fanda.com&t=Saya%20dijangka%20memerlukan%20sejumlah%20RM%20'+total+'%20untuk%20perkahwinan%20saya.%20Dapatkan%20anggaran%20untuk%20majlis%20anda%20juga%20di%20BajetKahwin.my');
-  
-  
-  
-
-
-
-}
-
-$(window).load(function(){if($.browser.msie){$("#rms").css({'margin-left' : '-9px','margin-top' : '-385px'})}});
-function half()
-{
-var half=parseFloat($("#sezi").val());
-$("#jump").val(half/2);
-$("#cal11").val((half/2)*0.6);
-}
-
-function pointSix()
-{
-var half=parseFloat($("#jump").val());
-$("#cal11").val(half*0.6);
-}
-
-function inputs()
-{
-var values=$('#select').val();
-if(values=="NYATAKAN")
-{
-$('#calss').html('<input type="text" maxlength="5" id="cal1"  value="0" onchange="update()"/>');
-}
-else
-{
-$('#calss').html(' ');
-}
-}
-
-function subs()
-{
-$('#email').block({message: '<img src="wait.gif"></img>'});
-var rm=$('#joomlah').text();
-var min1=parseFloat($("#minus1").val());if(min1!=='NaN') {c2="Mas Kahwin="+min1;}
-var min2=parseFloat($("#minus2").val());if(min2!=='NaN') {c2 +="&Wang Hantaran ="+min2;}
-var min3=parseFloat($("#minus3").val());if(min3!=='NaN') {c2 +="&Wang Ihasn="+min3;}
-var cal1=(parseFloat($("#cal1").val()))*(parseFloat($("#jumlz").val()));if(cal1=='NaN') {c2 +='Katering_='+cal1;}
-var cal2=parseFloat($("#cal2").val());if(cal2!=='NaN') { c2 +='&Sewa Lokasi='+cal2;}
-var cal3=parseFloat($("#cal3").val());if(cal3!=='NaN') { c2 +='&Pelamin and Hisan='+cal3;}
-var cal4=(parseFloat($("#cal4").val()))*(parseFloat($("#jumlz").val()));if(cal4!=='NaN') { c2 +='&Berkat='+cal4;}
-var cal4a=parseFloat($("#cal4a").val());if(cal4!=='NaN') { c2 +='&Set Dulang Hantaran='+cal4a;}
-var cal5=parseFloat($("#cal5").val());if(cal5!=='NaN') { c2 +='&Sewa Dewan atau Khemah='+cal5;}
-var cal6=parseFloat($("#cal6").val());if(cal6!=='NaN') { c2 +='&Sewa Baju Pengantin='+cal6;}
-var cal7=parseFloat($("#cal7").val());if(cal7!=='NaN') { c2 +='&Andaman pengantin perempuan='+cal7;}
-var cal18=parseFloat($("#sezi").val());if(cal18!=='NaN') { c2 +='&Jumlah tetamu='+cal18;}
-var cal8=(parseFloat($("#cal8").val()))*(parseFloat($("#sezi").val()));if(cal8!=='NaN') {c2 +='&Katering='+cal8;}
-var cal9=(parseFloat($("#cal9").val()))*(parseFloat($("#sezi").val()));if(cal9!=='NaN') {c2 +='&Barkat/wedding favour='+cal9;}
-var cal19=parseFloat($("#jump").val());if(cal19!=='NaN') { c2 +='&Bilangan penerima Kad jemputan='+cal19;}
-var cal10=(parseFloat($("#cal10").val()))*(parseFloat($("#jump").val()));if(cal10!=='NaN') {c2 +='&Tempahan Kad jemputan='+cal10;}
-
-var cal11=parseFloat($("#cal11").val());if(cal11!=='NaN') {c2 +='&Bilangan setem='+cal11;}
-
-
-
-  var total=cal1+cal2+cal3+cal4+cal4a+cal5+cal6+cal7+cal8+cal9+cal10+cal11;
-    if($("#field1").attr("disabled")!=="disabled") { total=total+parseFloat($("#field1").val()); if(parseFloat($("#field1").val())!=='NaN') {c2 +='&Pelamin & hiasan='+parseFloat($("#field1").val());} }
-    if($("#field2").attr("disabled")!=="disabled") { total=total+parseFloat($("#field2").val()); if(parseFloat($("#field2").val())!=='NaN') {c2 +='&Silat atau Tarian='+parseFloat($("#field2").val());}}
-    if($("#field3").attr("disabled")!=="disabled") { total=total+parseFloat($("#field3").val()); if(parseFloat($("#field3").val())!=='NaN') {c2 +='&Komping='+parseFloat($("#field3").val());}}
-    if($("#field4").attr("disabled")!=="disabled") { total=total+parseFloat($("#field4").val()); if(parseFloat($("#field4").val())!=='NaN') {c2 +='&Hiburan='+parseFloat($("#field4").val());}}
-    if($("#field5").attr("disabled")!=="disabled") { total=total+parseFloat($("#field5").val()); if(parseFloat($("#field5").val())!=='NaN') {c2 +='&Pengacara='+parseFloat($("#field5").val());}}
-    if($("#field6").attr("disabled")!=="disabled") { total=total+parseFloat($("#field6").val()); if(parseFloat($("#field6").val())!=='NaN') {c2 +='&Jurugambar='+parseFloat($("#field6").val());}}
-   c2 +='&email='+$("#emailss").val();
- 
-var minus=min1+min2+min3;
-if(total>0)
-{
-total=total-minus;
-}
-  c2 +='&total='+total;
-$.ajax({
-   type: "POST",
-   cache: false,
-   url: "send.php",
-   data: c2,
-   success: function(html){
-   setTimeout($('#email').unblock(),6000);
-   $('#email').html(html);
-   ;
-
-   }
- });
-   }
- 
-$("#joomlah").html("margin-left4px");
-	</script>
+		<link rel="apple-touch-icon-precomposed" href="../logo.png"/>
+        <link rel="icon" href="../favicon.png"/>
+        <script src="js/jquery-1.6.2.js"></script>
+	<script src="js/bride.js"></script>
+	<script src="js/sisyphus.min.js"></script>
+		 <script type="text/javascript">
+         $(window).load(function() {
+            $('#BKwanita').sisyphus(
+                {
+                    timeout: 0,
+                    autoRelease: true
+                }
+            );
+        });
+    </script>
 </head>
 <body>
 	<div class="header bride"><div class="inner">
         <h3>Pihak Perempuan</h3>
         <div class="jumlah"><span id="top">RM</span></div></div>
     </div>
-<div class="container"><form method="post" onsubmit="subs()" name="zanmbeel" >
+<div class="container"><form method="post" onsubmit="subs()" name="zanmbeel" id="BKwanita">
 <h3>Sumber Kewangan</h3>
 <ul><li><label>Mas kahwin</label>
-	<input type="text" maxlength="5" id="minus1"  value="0" onchange="update()"/> </li>
+	<input type="text" maxlength="5" id="minus1"  value="0" onchange="update()" name="maskahwin"/> </li>
 	<li><label>Wang Hantaran</label>
-	<input type="text" maxlength="5" id="minus2"  value="0" onchange="update()"/> </li>
+	<input type="text" maxlength="5" id="minus2"  value="0" onchange="update()" name="wanghantaran"/> </li>
 	<li><label>Sumber lain</label>
-	<input type="text" maxlength="5" id="minus3"  value="0" onchange="update()"/> </li></ul>
+	<input type="text" maxlength="5" id="minus3"  value="0" onchange="update()" name="sumberlain"/> </li></ul>
 <h3>  Majlis  Pernikahan </h3>
 <ul><li><label>Bilangan jemputan</label>
-	<input type="text" maxlength="5" id="jumlz" value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="jumlz" value="0" onchange="update()" name="nikahbilguest"/></li>
 	<li><label>Katering per pax</label>
-	<input type="text" maxlength="5" id="cal1"  value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="cal1"  value="0" onchange="update()" name="nikahkatering"/></li>
 	<li><label>Sewa khemah / masjid</label>
-	<input type="text" maxlength="5" id="cal2"  value="0" onchange="update()"/> </li>
+	<input type="text" maxlength="5" id="cal2"  value="0" onchange="update()" name="nikahsewakhemah"/> </li>
 	<li><label>Kos pelamin &amp; hiasan</label>
-	<input type="text" maxlength="5" id="cal3"  value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="cal3"  value="0" onchange="update()" name="nikahpelamin"/></li>
 	<li><label><em>Door gift</em> / berkat sebuah</label>
-	<input type="text" maxlength="5" id="cal4"  value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="cal4"  value="0" onchange="update()" name="nikahberkat"/></li>
 	<li><label>Jumlah set dulang hantaran</label>
-	<input type="text" maxlength="5" id="cal4a"  value="0" onchange="update()"/></li></ul>
+	<input type="text" maxlength="5" id="cal4a"  value="0" onchange="update()" name="nikahhantaran"/></li></ul>
 <h3>Keperluan Kenduri</h3>
 <ul><li><label>Sewa dewan / khemah</label>
-	<input type="text" maxlength="5" id="cal5"  value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="cal5"  value="0" onchange="update()" name="sewadewan"/></li>
 	<li><label>Baju pengantin</label>
-	<input type="text" maxlength="5" id="cal6"  value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="cal6"  value="0" onchange="update()" name="bajupengantin"/></li>
 	<li><label>Jurusolek</label>
-	<input type="text" maxlength="5" id="cal7"  value="0" onchange="update()"/> </li></ul>
+	<input type="text" maxlength="5" id="cal7"  value="0" onchange="update()" name="jurusolek"/> </li></ul>
 <h3> Saiz Kenduri </h3>
 <ul><li><label>Bilangan jemputan</label>
-	<input type="text" maxlength="5" id="sezi"  value="0" onchange="half(),update()"/></li>
+	<input type="text" maxlength="5" id="sezi"  value="0" onchange="half(),update()" name="bilguest"/></li>
 	<li><label>Katering per pax</label>
-	<input type="text" maxlength="5" id="cal8"  value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="cal8"  value="0" onchange="update()" name="kateringpax"/></li>
 	<li><label><em>Door gift</em> / berkat sebuah</label>
-	<input type="text" maxlength="5" id="cal9"  value="0" onchange="update()"/>	</li></ul>
+	<input type="text" maxlength="5" id="cal9"  value="0" onchange="update()" name="berkat"/>	</li></ul>
 <h3>Kad Undangan</h3>
 <ul><li><label>Bilangan kad</label>	
-	<input type="text" maxlength="5" id="jump"  value="0" onchange="pointSix(),update()"/></li>
+	<input type="text" maxlength="5" id="jump"  value="0" onchange="pointSix(),update()" name="bilkad"/></li>
 	<li><label>Harga kad sekeping</label>
-	<input type="text" maxlength="5" id="cal10" value="0" onchange="update()"/></li>
+	<input type="text" maxlength="5" id="cal10" value="0" onchange="update()" name="kad1"/></li>
 	<li><label>Jumlah Setem</label>
-	<input type="text" maxlength="5" id="cal11" value="0" onchange="update()"/>	</li></ul>
+	<input type="text" maxlength="5" id="cal11" value="0" onchange="update()" name="setem"/>	</li></ul>
 <h3>Tambahan </h3>
 <ul><li><label>	<input type="checkbox" id="cal" onclick="ableDisable('field1')" />Pelamin &amp; hiasan</label>
-	<input type="text" maxlength="5" id="field1" onchange="update()" disabled="disabled"/></li>
+	<input type="text" maxlength="5" id="field1" onchange="update()" disabled="disabled" name="hiasan"/></li>
 	<li><label><input type="checkbox" id="cal" onclick="ableDisable('field2')" />Silat atau Tarian</label>
-	<input type="text" maxlength="5" id="field2" onchange="update()" disabled="disabled"/></li>
+	<input type="text" maxlength="5" id="field2" onchange="update()" disabled="disabled" name="silat"/></li>
 	<li><label><input type="checkbox" id="cal" onclick="ableDisable('field3')" />Kompang	</label>
-	<input type="text" maxlength="5" id="field3" onchange="update()" disabled="disabled"/></li>
+	<input type="text" maxlength="5" id="field3" onchange="update()" disabled="disabled" name="kompang"/></li>
 	<li><label><input type="checkbox" id="cal" onclick="ableDisable('field4')" />Hiburan</label>
-	<input type="text" maxlength="5" id="field4" onchange="update()" disabled="disabled"/></li>
+	<input type="text" maxlength="5" id="field4" onchange="update()" disabled="disabled" name="hiburan"/></li>
 	<li><label>	<input type="checkbox" id="cal" onclick="ableDisable('field5')" />Pengacara</label>
-	<input type="text" maxlength="5" id="field5" onchange="update()" disabled="disabled"/></li>
+	<input type="text" maxlength="5" id="field5" onchange="update()" disabled="disabled" name="pengacara"/></li>
 	<li><label><input type="checkbox" id="cal" onclick="ableDisable('field6')" />Jurugambar</label>
-	<input type="text" maxlength="5" id="field6" onchange="update()" disabled="disabled"/></li></ul>
+	<input type="text" maxlength="5" id="field6" onchange="update()" disabled="disabled" name="jurugambar"/></li></ul>
+	<button name="button" type="reset" style="margin:10px; float:right;">Padam</button>
 </form></div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38624855-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>
