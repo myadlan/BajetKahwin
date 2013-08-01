@@ -7,12 +7,17 @@ groom.html
 bride.html
 
 # css files
-styles.css
+css/my.css
+style.css
 
 # js files
 js/jquery-1.6.2.js
 js/bride.js
 js/groom.js
+js/sisyphus.min.js
+js/add2home.js
 
 # images
 bgapp.jpg
+logo.png
+splashi.jpg
